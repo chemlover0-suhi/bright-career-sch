@@ -1,0 +1,50 @@
+BRIGHT CAREER SCHOOL — FINAL QUICK EDIT GUIDE
+
+SLOGAN:
+Lets live for our children
+
+ESTABLISHED:
+2014
+
+PRINCIPAL:
+Mr. Ishfaq Sir
+
+CHAIRPERSON:
+Mr. Zahoor Sir
+
+CLASSES:
+Nursery to Class 10th
+
+BUSES:
+12
+
+PHONE:
+9906664721
+
+EMAIL:
+brightcareer32@gmail.com
+
+ADDRESS:
+Villagam, near Higher Secondary School, Villagam, Kupwara, Kashmir
+
+THREE SPECIAL PAGES:
+buses.html
+school-desk.html
+anthem.html
+
+The school photo is the background/hero image for all three special pages.
+
+SOCIAL MEDIA:
+Instagram and Facebook are intentionally blank. Replace the # links after receiving the official URLs.
+
+PHOTOS:
+Principal/Chairperson photos are intentionally not invented. Add official photos later.
+
+TIMINGS:
+Not fixed because school timings change.
+
+TO CHANGE THE SCHOOL PHOTO:
+Replace assets/school-campus.png
+
+TO CHANGE THE ANTHEM:
+Replace assets/school-anthem.mp4
