@@ -20,7 +20,7 @@ Website for Bright Career Secondary School, Villagam, Kupwara, Kashmir.
 
 ## Assets
 - assets/school-campus.png — supplied school photograph
-- assets/school-anthem.mp4 — supplied anthem video
+- assets/school-anthem(1).mp4 — supplied anthem video
 
 The supplied school photograph is used as the background/hero image on the Home page and on all three special pages, as requested.
 
