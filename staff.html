@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Staff | Bright Career Secondary School</title>
+  <meta name="description" content="Meet the staff of Bright Career Secondary School, Villagam, Kupwara, Kashmir.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .staff-page { padding: 70px 0; }
+    .staff-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 35px;
+    }
+    .staff-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    }
+    .staff-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 18px;
+      display: block;
+      background: #eef4fb;
+    }
+    .staff-placeholder {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #eef4fb;
+      color: #0969c7;
+      font-size: 42px;
+      font-weight: 700;
+    }
+    .staff-card h3 { margin: 8px 0 5px; }
+    .staff-role { color: #55708e; font-weight: 600; margin: 0; }
+    @media (max-width: 850px) {
+      .staff-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .staff-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <span>📍 Villagam, Kupwara, Kashmir</span>
+      <span>📞 9906664721 · ✉️ brightcareer32@gmail.com</span>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <div class="logo">BC</div>
+        <div class="brand-title">Bright Career<small>SECONDARY SCHOOL • VILLAGAM</small></div>
+      </a>
+      <button class="menu" aria-label="Open navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="staff.html">Staff</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="staff-page">
+    <div class="container">
+      <div class="heading">
+        <span class="eyebrow">OUR TEAM</span>
+        <h1>Meet Our Staff</h1>
+        <p>Our teachers and staff work together to support learning, character and the growth of every child.</p>
+      </div>
+
+      <div class="staff-grid">
+
+        <!-- STAFF CARD 1 -->
+        <div class="staff-card">
+          <div class="staff-placeholder">IS</div>
+          <!-- To add a photo later, replace the line above with:
+          <img class="staff-photo" src="assets/ishfaq.jpg" alt="Mr. Ishfaq Sir">
+          -->
+          <h3>Mr. Ishfaq Sir</h3>
+          <p class="staff-role">Principal</p>
+        </div>
+
+        <!-- STAFF CARD 2 -->
+        <div class="staff-card">
+          <div class="staff-placeholder">ZS</div>
+          <!-- To add a photo later, replace the line above with:
+          <img class="staff-photo" src="assets/zahoor.jpg" alt="Mr. Zahoor Sir">
+          -->
+          <h3>Mr. Zahoor Sir</h3>
+          <p class="staff-role">Chairperson</p>
+        </div>
+
+        <!-- COPY THIS CARD FOR EACH TEACHER -->
+        <div class="staff-card">
+          <div class="staff-placeholder">+</div>
+          <h3>Teacher Name</h3>
+          <p class="staff-role">Subject / Position</p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Bright Career Secondary School</h3>
+          <p>“Lets live for our children”</p>
+          <p style="margin-top:7px">Villagam, near Higher Secondary School, Villagam, Kupwara, Kashmir.</p>
+        </div>
+        <div>
+          <h3>Special Links</h3>
+          <p><a href="buses.html">🚌 School Buses</a></p>
+          <p><a href="school-desk.html">🏫 School Desk</a></p>
+          <p><a href="gallery.html">📸 Gallery</a></p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p><a href="tel:9906664721">9906664721</a></p>
+          <p><a href="mailto:brightcareer32@gmail.com">brightcareer32@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="copyright">© <span class="year"></span> Bright Career Secondary School. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
