@@ -22,3 +22,28 @@
 footer{background:#031125;color:#bfcde0;padding:60px 0 25px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px}footer h3{color:#fff;margin-bottom:12px}footer p,footer a{color:#bfcde0}footer a:hover{color:var(--gold)}.socials{display:flex;gap:10px;margin-top:14px}.socials a{border:1px solid rgba(255,255,255,.14);padding:9px 12px;border-radius:10px}.copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:35px;padding-top:20px;font-size:.84rem}
 .fade{animation:fade .7s ease both}@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @media(max-width:900px){.nav-links{display:none;position:absolute;top:78px;left:0;right:0;background:#fff;padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.menu{display:block}.quick-grid,.stats-grid,.grid3,.grid2,.split,.footer-grid,.gallery{grid-template-columns:1fr}.hero{min-height:650px}.hero-content{padding:80px 0}.photo img{height:340px}.section{padding:65px 0}.topbar .container{justify-content:center;flex-wrap:wrap;padding:7px 0}}
+/* Bus Routes */
+.routes-section {
+    margin-top: 30px;
+}
+
+.routes-section h2 {
+    margin-bottom: 20px;
+}
+
+.route-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border-left: 5px solid #f5b82e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.route-card h3 {
+    margin: 0 0 8px;
+}
+
+.route-card p {
+    margin: 0;
+}
