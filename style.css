@@ -47,3 +47,126 @@ footer{background:#031125;color:#bfcde0;padding:60px 0 25px}.footer-grid{display
 .route-card p {
     margin: 0;
 }
+/* =========================
+   STAFF PAGE
+   Add this at the bottom of style.css
+   ========================= */
+
+.staff-page {
+    padding: 70px 0 80px;
+}
+
+.staff-heading {
+    max-width: 850px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.staff-heading h1 {
+    margin: 12px 0 16px;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.08;
+}
+
+.staff-heading p {
+    color: #5d7a9c;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.staff-card {
+    background: #ffffff;
+    border: 1px solid #d9e5f2;
+    border-radius: 22px;
+    padding: 34px 28px 30px;
+    text-align: center;
+    min-height: 340px;
+    box-shadow: 0 10px 30px rgba(14, 56, 96, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(14, 56, 96, 0.14);
+}
+
+.staff-initial {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #0a315c, #07599e);
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.staff-card h2 {
+    margin: 0 0 8px;
+    color: #06274b;
+    font-size: 1.45rem;
+}
+
+.staff-card h3 {
+    margin: 0 0 17px;
+    color: #0867bb;
+    font-size: 1.05rem;
+}
+
+.staff-card p {
+    margin: 0;
+    color: #6683a3;
+    line-height: 1.65;
+    font-size: 0.98rem;
+}
+
+.staff-coming {
+    margin: 45px auto 0;
+    padding: 28px;
+    max-width: 850px;
+    text-align: center;
+    background: #fff8e8;
+    border-left: 5px solid #f4b62d;
+    border-radius: 16px;
+}
+
+.staff-coming h2 {
+    margin: 0 0 8px;
+    color: #06274b;
+}
+
+.staff-coming p {
+    margin: 0;
+    color: #6683a3;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .staff-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .staff-page {
+        padding: 45px 0 60px;
+    }
+
+    .staff-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .staff-card {
+        min-height: auto;
+    }
+}
+
