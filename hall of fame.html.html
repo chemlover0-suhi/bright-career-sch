@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bright Career Educational Institute - Hall of Fame</title>
+    <title>Bright Career Secondary School — Hall of Fame Banners</title>
     <style>
         /* --- BRAND DESIGN SYSTEM --- */
         :root {
-            --primary: #0b132b;       /* Deep Midnight Blue */
-            --accent-green: #a3e635;  /* Vibrant Lime Green from posters */
-            --accent-dark: #15803d;   /* Forest Green text */
-            --bg-light: #f8fafc;      /* Off-White Background */
-            --card-bg: #ffffff;       /* Pure White Card Base */
-            --text-dark: #1e293b;     /* Dark Charcoal Text */
-            --text-muted: #64748b;    /* Secondary Slate Text */
-            --gold: #eab308;          /* Achievement Gold */
+            --primary: #0b132b;       /* Deep Slate Blue */
+            --accent-green: #a3e635;  /* Bright Lime Green branding color */
+            --bg-light: #f8fafc;      /* Soft backdrop */
+            --card-bg: #111827;       /* Dark premium background matching the banners */
+            --text-dark: #1e293b;     
             --radius: 16px;
-            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
         }
 
         * {
@@ -27,20 +24,20 @@
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: system-ui, -apple-system, sans-serif;
             background-color: var(--bg-light);
             color: var(--text-dark);
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
-        /* --- STICKY NAVIGATION --- */
+        /* --- STICKY NAVIGATION HEADER --- */
         header {
-            background-color: var(--card-bg);
-            border-bottom: 2px solid var(--accent-green);
+            background-color: #ffffff;
+            border-bottom: 3px solid var(--accent-green);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
 
         .nav-container {
@@ -52,26 +49,6 @@
             padding: 1rem 2rem;
         }
 
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .logo-placeholder {
-            width: 45px;
-            height: 45px;
-            background-color: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 0.8rem;
-            border: 2px solid var(--accent-green);
-        }
-
         .logo-text h1 {
             font-size: 1.25rem;
             color: var(--primary);
@@ -80,17 +57,17 @@
 
         .logo-text p {
             font-size: 0.75rem;
-            color: var(--text-muted);
+            color: #64748b;
             letter-spacing: 0.05em;
         }
 
         nav a {
             text-decoration: none;
-            color: var(--text-muted);
+            color: #64748b;
             font-weight: 600;
             margin-left: 1.5rem;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
             transition: var(--transition);
         }
 
@@ -99,35 +76,18 @@
             color: var(--primary);
         }
 
-        /* --- HERO SECTIONS --- */
+        /* --- HERO SPLASH PANEL --- */
         .hero {
             background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
             color: white;
-            padding: 5rem 2rem;
+            padding: 4rem 2rem;
             text-align: center;
-            position: relative;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 8px;
-            background-color: var(--accent-green);
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
         }
 
         .hero h2 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 800;
-            margin-bottom: 1rem;
-            letter-spacing: -0.03em;
+            margin-bottom: 0.5rem;
         }
 
         .hero h2 span {
@@ -135,144 +95,71 @@
         }
 
         .hero p {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: #cbd5e1;
+            font-style: italic;
         }
 
-        /* --- MAIN CONTENT PANELS --- */
+        /* --- MASTER BANNER CONTAINERS --- */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
+            margin-bottom: 2rem;
         }
 
         .section-header h3 {
-            font-size: 2rem;
+            font-size: 1.75rem;
             color: var(--primary);
             display: inline-block;
-            padding-bottom: 0.5rem;
-            border-bottom: 4px solid var(--accent-green);
+            padding-bottom: 0.25rem;
+            border-bottom: 3px solid var(--accent-green);
         }
 
-        /* --- GRID STYLES --- */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 5rem;
-        }
-
-        .grid-4 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 2rem;
-            margin-bottom: 5rem;
-        }
-
-        /* --- CARD ARCHITECTURE --- */
-        .card {
+        /* Unified Single Object Display */
+        .master-banner-frame {
             background-color: var(--card-bg);
             border-radius: var(--radius);
-            overflow: hidden;
             box-shadow: var(--shadow);
-            border: 1px solid #e2e8f0;
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(163, 230, 53, 0.15);
-        }
-
-        .image-box {
-            width: 100%;
-            height: 280px;
-            background-color: #f1f5f9;
-            position: relative;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border: 2px solid #1f2937;
+            margin-bottom: 5rem;
+            transition: var(--transition);
         }
 
-        .image-box img {
+        .master-banner-frame:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -10px rgba(163, 230, 53, 0.15);
+        }
+
+        /* Wrapper for handling full-width responsive poster images */
+        .banner-image-wrapper {
+            position: relative;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            display: block;
         }
 
-        .tag-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background-color: var(--primary);
-            color: white;
-            padding: 0.4rem 0.8rem;
-            border-radius: 30px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            border: 1px solid var(--accent-green);
-        }
-
-        .card-info {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .card-info h4 {
-            font-size: 1.25rem;
-            color: var(--primary);
-            margin-bottom: 0.25rem;
-        }
-
-        .score-highlight {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--accent-dark);
-            margin-top: 0.5rem;
-            background-color: #f0fdf4;
-            padding: 0.25rem 1rem;
-            border-radius: 8px;
-            display: inline-block;
-            align-self: center;
-        }
-
-        .rank-highlight {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #b45309;
-            margin-top: 0.5rem;
-            background-color: #fffbeb;
-            padding: 0.25rem 1rem;
-            border-radius: 8px;
-            display: inline-block;
-            align-self: center;
+        .banner-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* --- CONTACT INFOBAR --- */
         .contact-bar {
             background-color: var(--primary);
             color: white;
-            padding: 2.5rem 1rem;
+            padding: 2rem 1rem;
             text-align: center;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .contact-bar div {
-            margin: 0.5rem 0;
+            margin: 0.35rem 0;
             color: #94a3b8;
         }
 
@@ -285,294 +172,97 @@
             background-color: #020617;
             color: #475569;
             text-align: center;
-            padding: 1.5rem 1rem;
-            font-size: 0.85rem;
+            padding: 1rem;
+            font-size: 0.8rem;
             border-top: 1px solid #1e293b;
         }
 
-        /* --- RESPONSIVE ADAPTATION --- */
         @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 1rem; text-align: center; }
-            nav a { margin: 0 0.5rem; font-size: 0.9rem; }
-            .hero h2 { font-size: 2.2rem; }
+            .nav-container { flex-direction: column; gap: 0.75rem; }
+            nav a { margin: 0 0.25rem; font-size: 0.85rem; }
+            .hero h2 { font-size: 2rem; }
+            .container { padding: 2rem 1rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR AREA -->
+    <!-- STICKY NAVBAR -->
     <header>
         <div class="nav-container">
             <div class="logo-section">
-                <div class="logo-placeholder">BCEI</div>
                 <div class="logo-text">
                     <h1>BRIGHT CAREER</h1>
-                    <p>EDUCATIONAL INSTITUTE</p>
+                    <p>SECONDARY SCHOOL VILLAGAM</p>
                 </div>
             </div>
             <nav>
-                <a href="#neet">NEET 2024</a>
-                <a href="#cluster">Cluster Toppers</a>
+                <a href="#neet">NEET UG</a>
+                <a href="#cluster">Cluster Banners</a>
                 <a href="#board">Board Honors</a>
             </nav>
         </div>
     </header>
 
-    <!-- MAIN BRAND HERO HERO -->
+    <!-- SLOGAN HERO BLOCK -->
     <section class="hero">
-        <div class="hero-content">
-            <h2>BCEI <span>Hall of Fame</span></h2>
-            <p>Saluting the extraordinary excellence, resilience, and monumental achievements of our bright scholars from Vilgam Kupwara.</p>
-        </div>
+        <h2>BCEI <span>Wall of Success</span></h2>
+        <p>“Lets live for our children”</p>
     </section>
 
-    <!-- GRID PLATFORMS CONTAINER -->
+    <!-- UNIFIED POSTER DISPLAY CONTEXT -->
     <main class="container">
 
-        <!-- CATEGORY 1: NEET UG -->
-        <section id="neet" style="margin-bottom: 6rem;">
+        <!-- 1: NEET UG UNIFIED BANNER -->
+        <section id="neet">
             <div class="section-header">
                 <h3>NEET UG 2024 Champions</h3>
             </div>
-            <div class="grid-3">
-                <!-- AYAAN NASEER -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Ayaan Naseer">
-                        <div class="tag-badge">NEET UG</div>
-                    </div>
-                    <div class="card-info">
-                        <h4>Ayaan Naseer</h4>
-                        <div class="score-highlight">681 Marks</div>
-                    </div>
-                </div>
-
-                <!-- KIFAYAT QAYOOM -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Kifayat Qayoom">
-                        <div class="tag-badge">NEET UG</div>
-                    </div>
-                    <div class="card-info">
-                        <h4>Kifayat Qayoom</h4>
-                        <div class="score-highlight">613 Marks</div>
-                    </div>
-                </div>
-
-                <!-- SANIA MEHAK -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Sania Mehak">
-                        <div class="tag-badge">NEET UG</div>
-                    </div>
-                    <div class="card-info">
-                        <h4>Sania Mehak</h4>
-                        <div class="score-highlight">609 Marks</div>
-                    </div>
+            <div class="master-banner-frame">
+                <div class="banner-image-wrapper">
+                    <!-- Drop your complete NEET graphic inside your assets folder -->
+                    <img src="neet ug.png" alt="NEET UG 2024 Champions - Ayaan, Kifayat, Sania">
                 </div>
             </div>
         </section>
 
-        <!-- CATEGORY 2: CLUSTER TOPPERS -->
-        <section id="cluster" style="margin-bottom: 6rem;">
+        <!-- 2: CLUSTER TOPPERS UNIFIED BANNER -->
+        <section id="cluster">
             <div class="section-header">
                 <h3>Our Cluster Toppers</h3>
             </div>
-            <div class="grid-4">
-                <!-- NAJM UN NISSA -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Najm un Nissa">
-                        <div class="tag-badge">Cluster Top</div>
-                    </div>
-                    <div class="card-info">
-                        <h4>Najm un Nissa</h4>
-                        <div class="rank-highlight">1st Position</div>
-                    </div>
-                </div>
-
-                <!-- MEHRAJ DIN PEER -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Mehraj din Peer">
-                        <div class="tag-badge">Cluster Top</div>
-                    </div>
-                    <div class="card-info">
-                        <h4>Mehraj din Peer</h4>
-                        <div class="rank-highlight">3rd Position</div>
-                    </div>
-                </div>
-
-                <!-- SYED MOZIMA JAN -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Syed Mozima Jan">
-                        <div class="tag-badge">Cluster Top</div>
-                    </div>
-                    <div class="card-info">
-                        <h4>Syed Mozima Jan</h4>
-                        <div class="rank-highlight">4th Position</div>
-                    </div>
-                </div>
-
-                <!-- KHAN ZOYA -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Khan Zoya">
-                        <div class="tag-badge">Cluster Top</div>
-                    </div>
-                    <div class="card-info">
-                        <h4>Khan Zoya</h4>
-                        <div class="rank-highlight">6th Position</div>
-                    </div>
-                </div>
-
-                <!-- SADAF RASOOL -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Sadaf Rasool">
-                        <div class="tag-badge">Cluster Top</div>
-                    </div>
-                    <div class="card-info">
-                        <h4>Sadaf Rasool</h4>
-                        <div class="rank-highlight">8th Position</div>
-                    </div>
-                </div>
-
-                <!-- SADAF BINTI RIYAZ -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Sadaf Binti Riyaz">
-                        <div class="tag-badge">Cluster Top</div>
-                    </div>
-                    <div class="card-info">
-                        <h4>Sadaf Binti Riyaz</h4>
-                        <div class="rank-highlight">9th Position</div>
-                    </div>
-                </div>
-
-                <!-- ZULKARNAIN QURESHI -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Zulkarnain Qureshi">
-                        <div class="tag-badge">Cluster Top</div>
-                    </div>
-                    <div class="card-info">
-                        <h4>Zulkarnain Qureshi</h4>
-                        <div class="rank-highlight">10th Position</div>
-                    </div>
+            <div class="master-banner-frame">
+                <div class="banner-image-wrapper">
+                    <!-- Drop your complete Cluster Toppers graphic inside your assets folder -->
+                    <img src="cluster.png" alt="Our Cluster Toppers Group Panel">
                 </div>
             </div>
         </section>
 
-        <!-- CATEGORY 3: ACADEMIC BOARD RESULTS -->
+        <!-- 3: BOARD EXAM UNIFIED HONORS BANNER -->
         <section id="board">
             <div class="section-header">
                 <h3>Board Examination Board of Honor</h3>
             </div>
-            <div class="grid-4">
-                <!-- SHAZIA KHAN -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Shazia khan">
-                    </div>
-                    <div class="card-info">
-                        <h4>Shazia khan</h4>
-                        <div class="score-highlight">498 / 500</div>
-                    </div>
-                </div>
-
-                <!-- MEHRAJ DIN PIR -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Mehraj din Pir">
-                    </div>
-                    <div class="card-info">
-                        <h4>Mehraj din Pir</h4>
-                        <div class="score-highlight">497 / 500</div>
-                    </div>
-                </div>
-
-                <!-- SYED MOZIMA JAAN -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Syed Mozima jaan">
-                    </div>
-                    <div class="card-info">
-                        <h4>Syed Mozima jaan</h4>
-                        <div class="score-highlight">496 / 500</div>
-                    </div>
-                </div>
-
-                <!-- AAFAQ NAZIR -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Aafaq Nazir">
-                    </div>
-                    <div class="card-info">
-                        <h4>Aafaq Nazir</h4>
-                        <div class="score-highlight">496 / 500</div>
-                    </div>
-                </div>
-
-                <!-- NAJM UN NISSA -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Najm un Nissa">
-                    </div>
-                    <div class="card-info">
-                        <h4>Najm un Nissa</h4>
-                        <div class="score-highlight">495 / 500</div>
-                    </div>
-                </div>
-
-                <!-- IQRA ASHIQ -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Iqra Ashiq">
-                    </div>
-                    <div class="card-info">
-                        <h4>Iqra Ashiq</h4>
-                        <div class="score-highlight">495 / 500</div>
-                    </div>
-                </div>
-
-                <!-- MOMIN NABI -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Momin Nabi">
-                    </div>
-                    <div class="card-info">
-                        <h4>Momin Nabi</h4>
-                        <div class="score-highlight">495 / 500</div>
-                    </div>
-                </div>
-
-                <!-- ASRA BASHIR -->
-                <div class="card">
-                    <div class="image-box">
-                        <img src="https://via.placeholder.com/300x280" alt="Asra Bashir">
-                    </div>
-                    <div class="card-info">
-                        <h4>Asra Bashir</h4>
-                        <div class="score-highlight">494 / 500</div>
-                    </div>
+            <div class="master-banner-frame">
+                <div class="banner-image-wrapper">
+                    <!-- Drop your complete Board Honor graphic inside your assets folder -->
+                    <img src="10th hall of fame.png" alt="Board Examination Board of Honor Panel">
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- OFFICIAL INFORMATION BAR -->
+    <!-- BOTTOM INFO CARD -->
     <div class="contact-bar">
-        <h3>Bright Career Educational Institute</h3>
-        <div>📍 Vilgam Kupwara, Jammu & Kashmir 193224</div>
-        <div>📞 Contact: <span>+91 8082034721</span> | ✉ Email: <span>brightcareer032@gmail.com</span></div>
+        <h3>Bright Career Secondary School</h3>
+        <div>📍 Villagam, near Higher Secondary School, Kupwara, Kashmir</div>
+        <div>📞 Contact: <span>9906664721</span> | ✉ Email: <span>brightcareer32@gmail.com</span></div>
     </div>
 
-    <!-- FOOTER COPYRIGHT -->
     <footer>
-        <p>&copy; 2026 Bright Career Educational Institute (BCEI). All Rights Reserved.</p>
+        <p>&copy; 2026 Bright Career Secondary School. Established 2014. All Rights Reserved.</p>
     </footer>
 
 </body>
