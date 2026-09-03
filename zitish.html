@@ -4,7 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zitish | Bright Career Secondary School</title>
-    <link rel="stylesheet" href="style.css">
+     <style>
+        /* ==========================================
+           CORE STYLING PACKED INSIDE THE FILE
+           ========================================== */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #212121;
+            line-height: 1.6;
+        }
+
+        /* Top Bar Layout matching Index */
+        .top-bar {
+            background-color: #0f2043;
+            color: #ffffff;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* Main Header Area Layout */
+        .main-header {
+            background: #ffffff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .logo-area { display: flex; align-items: center; gap: 12px; }
+        .logo-box {
+            background: #0f2043;
+            color: #fff;
+            padding: 8px 12px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 4px;
+        }
+        .logo-text h1 { margin: 0; font-size: 1.4rem; color: #0f2043; }
+        .logo-text p { margin: 0; font-size: 0.75rem; color: #666; letter-spacing: 1px; }
+
+        /* Navigation Links Layout */
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 15px;
+            font-size: 0.95rem;
+        }
+        .nav-menu a:hover { color: #1565c0; }
+
+        /* Page Hero Layout Container */
+        .page-title-section {
+            background: linear-gradient(rgba(15, 32, 67, 0.85), rgba(15, 32, 67, 0.95)), url('assets/school-campus.png') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 4px solid #1565c0;
+        }
+        .page-title-container .sub-tag { font-size: 0.85rem; font-weight: bold; color: #ffb300; letter-spacing: 1px; }
+        .page-title-section h2 { font-size: 3rem; margin: 10px 0; letter-spacing: 2px; }
+        .page-title-container .motto { font-style: italic; opacity: 0.8; font-size: 0.95rem; }
+
+        /* Container & Cards spacing details */
+        .page-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        .intro-block { text-align: center; margin-bottom: 50px; }
+        .intro-block h3 { font-size: 1.8rem; color: #0f2043; margin-bottom: 15px; }
+        .intro-block p { font-size: 1.1rem; color: #444; max-width: 800px; margin: 0 auto; }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+        .feature-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .feature-card .card-icon { font-size: 2.5rem; display: block; margin-bottom: 15px; }
+        .feature-card h4 { font-size: 1.3rem; color: #0f2043; margin-bottom: 10px; }
+        .feature-card p { font-size: 0.95rem; color: #666; }
+
+        /* Footer Theming styling matching official styles */
+        .main-footer { background: #111111; color: #ffffff; padding: 40px 20px 20px 20px; font-size: 0.95rem; }
+        .footer-container { display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1100px; margin: 0 auto; gap: 30px; }
+        .footer-left h3, .footer-right h3 { color: #ffffff; margin-bottom: 15px; font-size: 1.2rem; }
+        .footer-motto { font-style: italic; color: #ccc; }
+        .footer-right ul { list-style: none; padding: 0; }
+        .footer-right ul li { margin-bottom: 8px; }
+        .footer-right ul li a { color: #bbb; text-decoration: none; }
+        .footer-right ul li a:hover { color: #fff; }
+        .footer-bottom { text-align: center; border-top: 1px solid #333; margin-top: 30px; padding-top: 20px; color: #777; font-size: 0.85rem; }
+
+        /* Responsive Breakpoint details */
+        @media (max-width: 768px) {
+            .main-header { flex-direction: column; gap: 15px; text-align: center; }
+            .nav-menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+            .nav-menu a { margin: 0; }
+            .page-title-section h2 { font-size: 2.2rem; }
+        }
+    </style>
 </head>
 <body>
 
