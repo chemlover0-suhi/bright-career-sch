@@ -244,12 +244,41 @@ body {
 </head>
 <body>
 
-    <!-- Top Contact Bar (Matches Index Page) -->
-  <nav class="navbar"><div class="container nav-inner">
-<a class="brand" href="index.html"><div class="logo">BC</div><div class="brand-title">Bright Career<small>SECONDARY SCHOOL • VILLAGAM</small></div></a>
-<button class="menu" aria-label="Open navigation">☰</button>
-<div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="academics.html">Academics</a><a href="admissions.html">Admissions</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a><a href="staff.html">staff</a><a href="zitish.html" style="color: #ffb300; font-weight: bold;">Zitish 🔬</a><a href= "hall of fame.html.html">hall of fame</a><a class="nav-cta" href="school-desk.html">School Desk</a><a href= "about-designer.html">designer</a></div>
-</div></nav>
+<!-- 1. Ensure the top utility bar matches the homepage exactly -->
+<div class="top-bar">
+  <div>📍 Villagam, Kupwara, Kashmir</div>
+  <div>📞 9906664721 · ✉ brightcareer32@gmail.com</div>
+</div>
+
+<!-- 2. This structure triggers your layout styles perfectly -->
+<header class="main-header">
+  <div class="logo-area">
+    <div class="logo-box">BC</div>
+    <div class="logo-text">
+      <h1>Bright Career</h1>
+      <p>SECONDARY SCHOOL • VILLAGAM</p>
+    </div>
+  </div>
+  
+  <!-- Add the hamburger button structure if your JavaScript toggles it -->
+  <div class="menu-toggle">☰</div>
+
+  <!-- This container separates your links and applies padding -->
+  <nav class="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="academics.html">Academics</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="staff.html">staff</a>
+    <a href="zitish.html" class="active">Zitish 🔬</a>
+    <a href="hall-of-fame.html">hall of fame</a>
+    <a href="school-desk.html">School Desk</a>
+    <a href="designer.html">designer</a>
+  </nav>
+</header>
+
 
 
     <!-- Page Title / Hero Section -->
