@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admissions | Bright Career Secondary School</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --navy:#071a30;
+  --blue:#0b4f91;
+  --gold:#f9bd32;
+  --white:#fff;
+  --muted:#64748b;
+  --line:#dce4ec;
+}
+
+body{
+  font-family:'DM Sans',Arial,sans-serif;
+  color:var(--navy);
+  background:#f7f9fc;
+}
+
+/* SAME STYLE AS YOUR HOMEPAGE HEADER */
+header{
+  height:74px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  padding:0 8%;
+  gap:28px;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 1px 8px rgba(0,0,0,.12);
+}
+
+.logo{
+  width:60px;height:60px;border-radius:20px;
+  background:linear-gradient(145deg,#174f8d,#073b73);
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-size:20px;font-weight:800;
+  flex-shrink:0;
+}
+
+.brand{display:flex;align-items:center;gap:14px;margin-right:auto}
+.brand-title{font-size:20px;font-weight:700;line-height:1.1}
+.brand-sub{font-size:12px;font-weight:600;color:#687b91;letter-spacing:.2px;margin-top:4px}
+
+nav{display:flex;align-items:center;gap:26px}
+nav a{
+  text-decoration:none;color:#34445a;font-weight:700;font-size:16px;
+}
+nav a:hover{color:var(--blue)}
+nav .active{
+  background:var(--navy);color:white;
+  padding:16px 21px;border-radius:16px;
+}
+
+/* ADMISSION HERO — MATCHES HOMEPAGE */
+.hero{
+  min-height:330px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,rgba(7,26,48,.95),rgba(7,26,48,.73),rgba(7,26,48,.48)),
+    url("school-photo.jpg") center/cover no-repeat;
+}
+
+.hero-content{
+  width:min(1120px,88%);
+  margin:auto;
+  color:white;
+  padding:55px 0;
+}
+
+.badge{
+  display:inline-block;
+  border:1px solid rgba(255,255,255,.35);
+  background:rgba(255,255,255,.1);
+  padding:10px 18px;
+  border-radius:30px;
+  font-size:14px;font-weight:700;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:clamp(45px,6vw,72px);
+  line-height:1;
+  margin-bottom:12px;
+}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:18px;max-width:700px;line-height:1.7;color:#e7edf5}
+
+/* FORM */
+.form-section{
+  width:min(1050px,90%);
+  margin:-35px auto 70px;
+  position:relative;
+  z-index:2;
+  background:#fff;
+  border-radius:24px;
+  box-shadow:0 20px 55px rgba(7,26,48,.13);
+  overflow:hidden;
+}
+
+.form-heading{
+  padding:28px 34px;
+  background:#fff;
+  border-bottom:1px solid #edf1f5;
+}
+.form-heading h2{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:30px;
+}
+.form-heading p{color:var(--muted);margin-top:5px}
+
+form{padding:32px 34px}
+
+.section{
+  margin-bottom:35px;
+}
+.section h3{
+  font-size:18px;
+  margin-bottom:18px;
+  color:var(--navy);
+  display:flex;align-items:center;gap:10px;
+}
+.section h3::before{
+  content:"";
+  width:5px;height:24px;
+  background:var(--gold);
+  border-radius:5px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px 22px;
+}
+
+.field label{
+  display:block;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:7px;
+  color:#26384e;
+}
+
+input,select,textarea{
+  width:100%;
+  border:1px solid var(--line);
+  background:#fbfcfe;
+  border-radius:12px;
+  padding:14px;
+  font-family:inherit;
+  font-size:14px;
+  color:#26384e;
+  outline:none;
+  transition:.2s;
+}
+
+input:focus,select:focus,textarea:focus{
+  border-color:#4384bd;
+  box-shadow:0 0 0 3px rgba(67,132,189,.1);
+  background:white;
+}
+
+textarea{min-height:105px;resize:vertical}
+.full{grid-column:1/-1}
+
+.note{
+  background:#fff8e7;
+  border:1px solid #f7df9e;
+  border-radius:13px;
+  padding:16px;
+  color:#6e561b;
+  font-size:13px;
+  line-height:1.6;
+  margin-bottom:24px;
+}
+
+.actions{
+  display:flex;justify-content:flex-end;gap:12px;
+}
+
+button{
+  border:0;border-radius:13px;
+  padding:14px 25px;
+  font-family:inherit;font-weight:700;
+  cursor:pointer;font-size:15px;
+}
+.clear{background:#eef2f6;color:#26384e}
+.submit{
+  background:var(--gold);
+  color:#071a30;
+  box-shadow:0 8px 20px rgba(249,189,50,.25);
+}
+.submit:hover{transform:translateY(-1px)}
+
+#success{
+  display:none;
+  margin-top:20px;
+  padding:15px;
+  border-radius:12px;
+  background:#eaf8ef;
+  color:#166534;
+  font-weight:700;
+  text-align:center;
+}
+
+/* FOOTER */
+footer{
+  background:#071a30;
+  color:#b9c6d6;
+  padding:38px 8%;
+  text-align:center;
+}
+footer h3{
+  color:white;
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:25px;
+  margin-bottom:8px;
+}
+footer .gold{color:var(--gold)}
+
+@media(max-width:1050px){
+  header{padding:0 4%}
+  nav{gap:14px}
+  nav a{font-size:14px}
+}
+
+@media(max-width:800px){
+  header{height:auto;padding:12px 5%;flex-wrap:wrap}
+  nav{width:100%;overflow-x:auto;padding-bottom:5px}
+  nav a{white-space:nowrap}
+  .brand{margin-right:0}
+  .grid{grid-template-columns:1fr}
+  .full{grid-column:auto}
+  .hero-content{width:90%}
+  .form-section{margin-top:-20px}
+  form{padding:25px 20px}
+  .form-heading{padding:24px 20px}
+  .actions{justify-content:stretch;flex-direction:column}
+  button{width:100%}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">BC</div>
+    <div>
+      <div class="brand-title">Bright Career</div>
+      <div class="brand-sub">SECONDARY SCHOOL • VILLAGAM</div>
+    </div>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="academics.html">Academics</a>
+    <a href="apply.html" class="active">Admissions</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="staff.html">staff</a>
+    <a href="zitish.html" style="color:#f2a900">Zitish 🎉</a>
+    <a href="hall-of-fame.html">hall of fame</a>
+    <a href="school-desk.html">School Desk</a>
+    <a href="designer.html">designer</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="badge">✨ NURSERY TO CLASS 10TH • EST. 2014</div>
+    <h1>Apply for <span>Admission</span></h1>
+    <p>
+      Begin your child's journey at Bright Career Secondary School.
+      Complete the application below and our school team will contact you.
+    </p>
+  </div>
+</section>
+
+<section class="form-section">
+
+  <div class="form-heading">
+    <h2>Admission Application</h2>
+    <p>Please provide the student's and parent's information carefully.</p>
+  </div>
+
+  <form id="admissionForm">
+
+    <div class="section">
+      <h3>Student Information</h3>
+      <div class="grid">
+
+        <div class="field">
+          <label>Student Full Name *</label>
+          <input type="text" required placeholder="Enter student's full name">
+        </div>
+
+        <div class="field">
+          <label>Date of Birth *</label>
+          <input type="date" required>
+        </div>
+
+        <div class="field">
+          <label>Gender *</label>
+          <select required>
+            <option value="">Select gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Class Applying For *</label>
+          <select required>
+            <option value="">Select class</option>
+            <option>Nursery</option><option>LKG</option><option>UKG</option>
+            <option>1st</option><option>2nd</option><option>3rd</option>
+            <option>4th</option><option>5th</option><option>6th</option>
+            <option>7th</option><option>8th</option><option>9th</option>
+            <option>10th</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label>Previous School</label>
+          <input type="text" placeholder="Enter previous school name, if applicable">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Parent / Guardian Information</h3>
+      <div class="grid">
+
+        <div class="field">
+          <label>Father's Name *</label>
+          <input type="text" required placeholder="Enter father's name">
+        </div>
+
+        <div class="field">
+          <label>Mother's Name *</label>
+          <input type="text" required placeholder="Enter mother's name">
+        </div>
+
+        <div class="field">
+          <label>Parent / Guardian Phone *</label>
+          <input type="tel" required pattern="[0-9]{10}" placeholder="10-digit mobile number">
+        </div>
+
+        <div class="field">
+          <label>Email Address</label>
+          <input type="email" placeholder="example@email.com">
+        </div>
+
+        <div class="field full">
+          <label>Residential Address *</label>
+          <textarea required placeholder="Enter complete residential address"></textarea>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Transport & Additional Information</h3>
+      <div class="grid">
+
+        <div class="field">
+          <label>School Bus Required?</label>
+          <select>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Preferred Bus Route</label>
+          <select>
+            <option value="">Select route</option>
+            <option>Manzgam</option>
+            <option>Magam</option>
+            <option>Kralpora</option>
+            <option>Trehgam</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="field full">
+          <label>Additional Message</label>
+          <textarea placeholder="Anything else you would like the school to know?"></textarea>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Important:</strong> Submitting this form is an admission enquiry/application.
+      The school may contact the parent or guardian for document verification and further admission procedures.
+    </div>
+
+    <div class="actions">
+      <button type="reset" class="clear">Clear Form</button>
+      <button type="submit" class="submit">Submit Application →</button>
+    </div>
+
+    <div id="success">
+      ✓ Application form submitted successfully. Bright Career Secondary School will contact you soon.
+    </div>
+
+  </form>
+</section>
+
+<footer>
+  <h3>Bright Career <span class="gold">Secondary School</span></h3>
+  <p>Villagam, Kupwara, Kashmir</p>
+  <p>9906664721 • brightcareer32@gmail.com</p>
+  <p style="margin-top:10px">“Lets live for our children”</p>
+</footer>
+
+<script>
+document.getElementById("admissionForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  document.getElementById("success").style.display = "block";
+  document.getElementById("success").scrollIntoView({behavior:"smooth",block:"center"});
+});
+</script>
+
+</body>
+</html>
